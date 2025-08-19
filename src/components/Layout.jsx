@@ -1,23 +1,21 @@
-import Header from './Header';
-import Sidebar from './Sidebar';
+import React from 'react';
 import { Outlet } from 'react-router-dom';
-import {
-  LayoutWrapper,
-  ContentWrapper,
-  MainContent,
-} from '../styles/layout.styles';
+import Sidebar from './Sidebar';
+import TopBar from './TopBar';
+import { LayoutWrapper, MainContent } from '../styles/layout.styles';
 
-
-export default function Layout() {
+const Layout = ({ mode, setMode }) => {
   return (
     <LayoutWrapper>
-      <Sidebar />
-      <ContentWrapper>
-        <Header />
+      <Sidebar setMode={setMode} />
+      <div style={{ flexGrow: 1 }}>
+        <TopBar mode={mode} setMode={setMode} />
         <MainContent>
           <Outlet />
         </MainContent>
-      </ContentWrapper>
+      </div>
     </LayoutWrapper>
   );
-}
+};
+
+export default Layout;

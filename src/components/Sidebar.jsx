@@ -14,6 +14,7 @@ const navItems = [
   { label: 'Dashboard', path: '/' },
   { label: 'Celestial Map', path: '/map' },
   { label: 'Settings', path: '/settings' },
+  { label: 'About', path: '/about' },
 ];
 
 export default function Sidebar() {
