@@ -22,6 +22,7 @@ return (
           <Route path="settings" element={<Settings />} />
           <Route path="map" element={<CelestialMap />} />
           <Route path="about" element={<About />} />
+          <Route path="observatory" element={<Observatory />} />
         </Route>
       </Routes>
     </BrowserRouter>
