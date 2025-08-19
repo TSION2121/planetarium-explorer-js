@@ -7,7 +7,7 @@ import Dashboard from './pages/Dashboard';
 import Settings from './pages/Settings';
 import CelestialMap from './components/CelestialMap';
 import About from './pages/About';
-
+import Observatory from './pages/Observatory';
 export default function App() {
   const [mode, setMode] = useState('light');
   const theme = getTheme(mode);
