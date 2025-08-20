@@ -1,21 +1,27 @@
 import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
+import Card from '@mui/material/Card';
 
-export const MapWrapper = styled('div')(({ theme }) => ({
+export const CelestialWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(4),
-  backgroundColor: theme.palette.background.paper,
-  borderRadius: theme.shape.borderRadius,
-  boxShadow: theme.shadows[1],
+  backgroundColor: theme.palette.background.default,
 }));
 
-export const MapTitle = styled(Typography)(({ theme }) => ({
-  fontSize: '1.5rem',
+export const CelestialTitle = styled(Typography)(({ theme }) => ({
   fontWeight: 600,
-  marginBottom: theme.spacing(2),
   color: theme.palette.text.primary,
+  marginBottom: theme.spacing(2),
 }));
 
-export const MapDescription = styled(Typography)(({ theme }) => ({
-  fontSize: '1rem',
-  color: theme.palette.text.secondary,
+export const ControlPanel = styled('div')(({ theme }) => ({
+  display: 'flex',
+  gap: theme.spacing(2),
+  marginBottom: theme.spacing(4),
+  flexWrap: 'wrap',
+}));
+
+export const CelestialCard = styled(Card)(({ theme }) => ({
+  backgroundColor: theme.palette.background.paper,
+  boxShadow: theme.shadows[3],
+  borderRadius: theme.shape.borderRadius,
 }));
