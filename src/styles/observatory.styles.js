@@ -10,6 +10,7 @@ export const ObservatoryWrapper = styled('div')(({ theme }) => ({
 export const ObservatoryTitle = styled(Typography)(({ theme }) => ({
   fontWeight: 600,
   color: theme.palette.text.primary,
+  marginBottom: theme.spacing(2),
 }));
 
 export const ObservatoryCard = styled(Card)(({ theme }) => ({
