@@ -35,6 +35,4 @@ cd planetarium-explorer
 npm install
 npm run dev
 
-#screenshot
 
-![Celestial Map](./screeenshots\SCREENSHOT-1.png)
