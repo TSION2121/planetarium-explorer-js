@@ -35,13 +35,6 @@ cd planetarium-explorer
 npm install
 npm run dev
 
-## 🏷️ GitHub Badges
-
-![Last Commit](https://img.shields.io/github/last-commit/tsion2121/planetarium-explorer)
-![Open Issues](https://img.shields.io/github/issues/tsion2121/planetarium-explorer)
-![Forks](https://img.shields.io/github/forks/tsion2121/planetarium-explorer?style=social)
-![Stars](https://img.shields.io/github/stars/tsion2121/planetarium-explorer?style=social)
-![License](https://img.shields.io/github/license/tsion2121/planetarium-explorer)
-
+#screenshot
 
 ![Celestial Map](./screeenshots\SCREENSHOT-1.png)
