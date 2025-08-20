@@ -30,7 +30,7 @@
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/tsion2121/planetarium-explorer
+git clone https://github.com/tsion2121/planetarium-explorer-js
 cd planetarium-explorer
 npm install
 npm run dev
