@@ -1,21 +1,32 @@
-import { useEffect, useState } from 'react';
-import { fetchUserData } from '../services/api';
+import { useApod } from '../api/useApod';
+import {
+  DashboardWrapper,
+  Title,
+  Description,
+  Image,
+  MobileNotice,
+} from '../styles/dashboard.styles';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 export default function Dashboard() {
-  const [users, setUsers] = useState([]);
+  const { data, error } = useApod();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  useEffect(() => {
-    fetchUserData().then(setUsers);
-  }, []);
+  if (error) return <p>Error loading image</p>;
+  if (!data) return <p>Loading...</p>;
 
   return (
-    <section>
-      <h1>Dashboard</h1>
-      <ul>
-        {users.map(user => (
-          <li key={user.id}>{user.name}</li>
-        ))}
-      </ul>
-    </section>
+    <DashboardWrapper>
+      <Title>{data.title}</Title>
+      {!isMobile && <Image src={data.url} alt={data.title} />}
+      <Description>{data.explanation}</Description>
+      {isMobile && (
+        <MobileNotice>
+          📱 Image hidden on mobile for performance. View on desktop for full experience.
+        </MobileNotice>
+      )}
+    </DashboardWrapper>
   );
 }
